@@ -29,5 +29,5 @@ async def root():
 @app.get("/token")
 async def getToken():
     return client.tokens.single_use.create(
-        token_type="tts_websocket"
+        token_type="tts_websocket"  
     )

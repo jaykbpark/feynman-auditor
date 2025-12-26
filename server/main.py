@@ -28,6 +28,7 @@ async def root():
 
 @app.get("/token")
 async def getToken():
+    """Get a single-use token for ElevenLabs WebSocket connections"""
     return client.tokens.single_use.create(
-        token_type="tts_websocket"  
+        token_type="realtime_scribe"  # Speech-to-text WebSocket token
     )

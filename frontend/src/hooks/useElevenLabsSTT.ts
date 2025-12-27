@@ -220,7 +220,6 @@ export function useElevenLabsSTT(config: ElevenLabsSTTConfig = {}): ElevenLabsST
     }
     const base64 = btoa(binary);
 
-    // Don't commit manually - let VAD handle it automatically
     const message = {
       message_type: 'input_audio_chunk',
       audio_base_64: base64,
